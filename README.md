@@ -76,6 +76,3 @@ streamlit run app.py
 
 Open the local URL, upload `test_data.csv`, and select a model.
 
-## BITS Virtual Lab evidence
-
-Insert one screenshot of the assignment running in the BITS Virtual Lab before submitting the final PDF. The screenshot is intentionally not fabricated in this package.

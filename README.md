@@ -12,11 +12,11 @@ Source: https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnosti
 
 ## GitHub Repository Link
 
-**Add your repository URL here after publishing:** `https://github.com/<your-username>/<your-repository>`
+GitHub repository: https://github.com/11kriti/ml-assignment-2
 
 ## Live Streamlit App Link
 
-**Add your deployed app URL here after deployment:** `https://<your-app-name>.streamlit.app`
+Live app: https://ml-assignment-kriti.streamlit.app/
 
 ## Models and evaluation
 
@@ -43,7 +43,7 @@ All models use the same train/test split. Logistic Regression and kNN use standa
 
 ## Streamlit features
 
-- CSV test-data upload with schema validation.
+- Bundled `test_data.csv` loads automatically; optional CSV upload with schema validation is also supported.
 - Model-selection dropdown for all five models.
 - Accuracy, AUC, precision, recall, F1, and MCC display when the target column is present.
 - Confusion matrix, classification report, predictions table, and prediction download.
@@ -74,5 +74,8 @@ python model/model_training.py
 streamlit run app.py
 ```
 
-Open the local URL, upload `test_data.csv`, and select a model.
+Open the local URL and select a model. The bundled `test_data.csv` loads automatically; uploading another compatible CSV is optional.
 
+## BITS Virtual Lab evidence
+
+The submitted screenshot shows the deployed Streamlit app running with the bundled test data, evaluation metrics, confusion matrix, and classification report.

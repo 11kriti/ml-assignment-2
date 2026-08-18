@@ -41,13 +41,16 @@ def main():
 
     feature_names, target_names = dataset_schema()
     models = load_models()
-    uploaded = st.file_uploader("Upload test data as CSV", type="csv")
+    uploaded = st.file_uploader(
+        "Optional: upload another test CSV",
+        type="csv",
+        help="If no file is selected, the bundled test_data.csv is used automatically.",
+    )
     if uploaded is None:
-        st.info("Upload the included test_data.csv file to evaluate a model.")
-        st.code("The CSV must contain the 30 dataset feature columns and may include a target column.")
-        return
-
-    data = pd.read_csv(uploaded)
+        data = pd.read_csv(ROOT / "test_data.csv")
+        st.success("Using the bundled test_data.csv file.")
+    else:
+        data = pd.read_csv(uploaded)
     missing = sorted(set(feature_names) - set(data.columns))
     if missing:
         st.error(f"The file is missing {len(missing)} required feature column(s).")
